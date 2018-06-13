@@ -1,0 +1,23 @@
+<form role="form"  [formGroup]="izmeniSobuForm">
+  <div class="form-group" >
+     <label for="roomName">ID:</label>
+     <input type="number" class="form-control" formControlName="id">
+   </div>
+  <div class="form-group" >
+     <label for="roomname">Room name:</label>
+     <input type="text" class="form-control"formControlName="roomname" >
+   </div>
+   <div class="form-group">
+    <label for="tv">TV:</label>
+	<select  class="form-control" ng-selected="Yes" formControlName="tv" >
+		<option   value="1" >Yes</option>
+		<option   value="0" >No</option>
+	</select>
+  </div>
+  <div class="form-group">
+    <label for="beds">Number of beds:</label>
+    <input type="number" class="form-control"  formControlName="beds"  >
+  </div>
+
+  <button (click)="onModifyRoom()" class="btn btn-default">Izmeni informacije o sobi</button>
+</form>
